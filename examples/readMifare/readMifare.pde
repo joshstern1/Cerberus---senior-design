@@ -53,7 +53,7 @@ products from Adafruit!
 // is connected to the Arduino:
 
 // Use this line for a breakout with a software SPI connection (recommended):
-Adafruit_PN532 nfc(PN532_SCK, PN532_MISO, PN532_MOSI, PN532_SS);
+// Adafruit_PN532 nfc(PN532_SCK, PN532_MISO, PN532_MOSI, PN532_SS);
 
 // Use this line for a breakout with a hardware SPI connection.  Note that
 // the PN532 SCK, MOSI, and MISO pins need to be connected to the Arduino's
@@ -62,7 +62,7 @@ Adafruit_PN532 nfc(PN532_SCK, PN532_MISO, PN532_MOSI, PN532_SS);
 //Adafruit_PN532 nfc(PN532_SS);
 
 // Or use this line for a breakout or shield with an I2C connection:
-//Adafruit_PN532 nfc(PN532_IRQ, PN532_RESET);
+Adafruit_PN532 nfc(PN532_IRQ, PN532_RESET);
 
 #if defined(ARDUINO_ARCH_SAMD)
 // for Zero, output on USB Serial console, remove line below if using programming port to program the Zero!
