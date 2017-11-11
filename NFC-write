@@ -1,6 +1,6 @@
 /**************************************************************************/
 /*! 
-    @file     readMifare.pde
+    @file     NFC-write.pde
     @author   Cerberus team with guidence of Adafruit Industries source code
   @license  BSD (see license.txt)
 **************************************************************************/
