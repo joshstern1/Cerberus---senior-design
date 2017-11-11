@@ -292,6 +292,28 @@ void Adafruit_PN532::PrintHexChar(const byte * data, const uint32_t numBytes)
   PN532DEBUGPRINT.println();
 }
 
+//amalrm.com values print
+void Adafruit_PN532::PrintCerberus(const byte * data, const uint32_t numBytes)
+{
+  uint32_t szPos;
+  for (szPos=0; szPos < numBytes; szPos++)
+  {
+    // Append leading 0 for small values
+    if ((numBytes > 1) && (szPos != numBytes - 1))
+    {
+      PN532DEBUGPRINT.print(F(" "));
+    }
+  }
+  PN532DEBUGPRINT.print(F("  "));
+  for (szPos=0; szPos < numBytes; szPos++)
+  {
+    if (data[szPos] <= 9)
+      PN532DEBUGPRINT.print(data[szPos]);
+    else
+      PN532DEBUGPRINT.print((char)data[szPos]);
+  }
+  PN532DEBUGPRINT.println();
+}
 /**************************************************************************/
 /*!
     @brief  Checks the firmware version of the PN5xx chip
